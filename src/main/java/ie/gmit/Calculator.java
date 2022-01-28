@@ -2,26 +2,28 @@ package ie.gmit;
 
 public class Calculator {
 
-    int firstnum = 10;
-    int secondnum = 34;
-    int result;
-
-    public Calculator() {
-        //this Method will add two numbers
-
+    public Calculator(){
         System.out.println("Simple Calculator");
-        result = firstnum + secondnum;
-        System.out.println(result);
-
-
     }
 
 
+    public int add(int firstnum, int secondnum) {
+        //this Method will add two numbers
+        int result = firstnum + secondnum;
+        System.out.println(result);
+        return result;
 
+    }
 
+    public int subtract(int firstnum, int secondnum){
+        //this Method will subtract two numbers
+        int result = firstnum - secondnum;
+        System.out.println(result);
+        return result;
+    }
 
     public static void main(String[] args) {
-         new Calculator();
+       //  subtract();
     }
 
 }
