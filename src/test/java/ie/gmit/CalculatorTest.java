@@ -29,5 +29,11 @@ public class CalculatorTest {
         assertEquals(4,result,0);
     }
 
+    @Test
+    public void multiplyTest(){
+        Calculator calc = new Calculator();
+        int result = calc.multiply(9,8);
+        assertEquals(72,result,0);
+    }
 
 }
