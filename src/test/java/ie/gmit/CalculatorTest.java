@@ -22,5 +22,12 @@ public class CalculatorTest {
         assertEquals(7,result,0);
     }
 
+    @Test
+    public void divideTest(){
+        Calculator calc = new Calculator();
+        int result = calc.divide(48,12);
+        assertEquals(4,result,0);
+    }
+
 
 }
