@@ -17,6 +17,9 @@ public class CalculatorTest {
     }
     @Test
     public void subtractTest(){
+        Calculator calc = new Calculator();
+        int result = calc.subtract(10,3);
+        assertEquals(7,result,0);
     }
 
 
