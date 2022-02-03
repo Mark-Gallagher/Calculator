@@ -21,6 +21,18 @@ public class Calculator {
         System.out.println(result);
         return result;
     }
+    public int divide(int firstnum, int secondnum){
+        //this Method will subtract two numbers
+        int result = firstnum / secondnum;
+        System.out.println(result);
+        return result;
+    }
+    public int multiply(int firstnum, int secondnum){
+        //this Method will subtract two numbers
+        int result = firstnum * secondnum;
+        System.out.println(result);
+        return result;
+    }
 
     public static void main(String[] args) {
        //  subtract();
