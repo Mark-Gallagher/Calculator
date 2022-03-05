@@ -15,6 +15,7 @@ public class CalculatorTest {
     public void setUp(){
        calc = new Calculator();
     }
+   
     @Test
     public void addTest() {
         //Calculator calc = new Calculator();
