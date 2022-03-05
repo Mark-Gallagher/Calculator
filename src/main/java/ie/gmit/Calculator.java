@@ -16,7 +16,8 @@ public class Calculator {
         }
 
         else {
-            throw new IllegalArgumentException("Not a valid entry!");
+            String message = "Not a valid entry!";
+            throw new IllegalArgumentException(message);
         }
 
     }
@@ -29,7 +30,8 @@ public class Calculator {
         }
 
         else {
-            throw new IllegalArgumentException("Not a valid entry!");
+            String message = "Not a valid entry!";
+            throw new IllegalArgumentException(message);
         }
     }
     public int divide(int firstnum, int secondnum){
