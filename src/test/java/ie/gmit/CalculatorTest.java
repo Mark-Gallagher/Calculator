@@ -7,12 +7,14 @@ import org.junit.jupiter.api.Test;
 
 public class CalculatorTest {
 
+
+
    private Calculator calc;
 
 
     @BeforeEach
     public void setUp(){
-       calc = new Calculator();
+        calc = new Calculator();
     }
    
     @Test
@@ -80,6 +82,39 @@ public class CalculatorTest {
         assertEquals("Not a valid entry!", exception.getMessage());
     }
 
+    @DisplayName("Divide pass test")
+    @Test
+    void testDivide(){assertEquals(9,calc.divide(81,9));}
 
+    @DisplayName("Division fail test for Value less than 0")
+    @Test
+    void testDivideFail(){
+        Exception exception = assertThrows(IllegalArgumentException.class,() -> calc.divide(-9,9));
+        assertEquals("Not a valid entry!", exception.getMessage());
+    }
+    @DisplayName("Division fail test for Value greater than 1000")
+    @Test
+    void testDivideFailTwo(){
+        Exception exception = assertThrows(IllegalArgumentException.class,() -> calc.divide(1009,9));
+        assertEquals("Not a valid entry!", exception.getMessage());
+    }
+
+    @DisplayName("Multiplication pass test")
+    @Test
+    void testMultiply(){assertEquals(72,calc.multiply(9,8));}
+
+
+    @DisplayName("Multiplication fail test for Value less than 0")
+    @Test
+    void testMultiplyFail(){
+        Exception exception = assertThrows(IllegalArgumentException.class,() -> calc.multiply(-70,8));
+        assertEquals("Not a valid entry!", exception.getMessage());
+    }
+    @DisplayName("Multiplication fail test for Value greater than 1000")
+    @Test
+    void testMultiplyFailTwo(){
+        Exception exception = assertThrows(IllegalArgumentException.class,() -> calc.multiply(1070,8));
+        assertEquals("Not a valid entry!", exception.getMessage());
+    }
 }
 
